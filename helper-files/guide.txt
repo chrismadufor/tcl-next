@@ -1,0 +1,45 @@
+BLOG GUIDE
+
+ * Go to the blogfiles folder. Copy and paste the test_post.js file in the same folder. You should now see 'test_post copy.js'. 
+ 
+ * Rename the file to the title of the post. The name of the file should be in this format; name_of_file.js
+ 
+ * Copy and paste the post you have into the (``) of the file you created. 
+ 
+ * Seperate each paragraph with a double line-break (<br><br>). This means you do not have to wrap them in <p> tags.
+
+ * Wrap texts that need to be bold in <b>Bold Text</b> tags.
+
+ * All headings should be in this format; <h1 class="mt-5 mb-3 font-semibold text-xl">Put Heading Here</h1>.
+
+ * If there are images inside the text, import them in this file and change the src as shown below.
+
+ * import testImg from 'path-to-the-image-file'
+
+ * ...inside the text add images as seen below,
+ <img src=${testImg} alt='' />
+
+ * Once you have done all these, go to the blogpost-files.js and add an object for your post. Change the id, author, date, etc. 
+ PS: The slug is simply the title of the post in small letters and separated by hyphen
+
+
+
+ GALLERY GUIDE
+
+* Open the gallery.js file in the helper-files folder
+
+* Import the images you want to add
+
+* Add the names in the array. 
+
+* DON'T FORGET TO SEPARATE THE NAMES WITH COMMA
+
+
+EMAIL JS GUIDE
+
+* Check the emailjsInfo.js file in the helper files folder.
+
+
+TAWK TO GUIDE
+
+* Copy the code from the tawkto dashboard and replace the one in the index.html file 

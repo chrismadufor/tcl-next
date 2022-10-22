@@ -1,0 +1,16 @@
+const data_forensics = `
+Digital forensics until recently was a strange and distant concept to many Nigerians but not anymore! With the emergence of cybercriminals and cryptocurrency, the concept of Digital Forensics is no longer foreign to numerous organizations dealing with sensitive data stored digitally.” Digital Forensics Market is growing exponentially owing to certain factors such as expanding occurrences of cyber-attacks on company tools “according to The Courier (Dec 2020) <br /><br />
+<img src="/assets/img/blog/blog-img12.png" alt="" /> <br /><br />
+Digital Forensics Market is growing exponentially owing to certain factors such as expanding occurrences of cyber-attacks on company tools, growth in the effectiveness of cryptocurrencies is anticipated to act as an opportunity for the market. <br/>
+When digital forensic is mentioned most people immediately think of computers, cell phones, and the Internet as the only sources for digital evidence, but any piece of technology that processes information can be used criminally. For example, hand-held games can carry encoded messages between criminals, and even newer household appliances, such as a refrigerator with a built-in TV, could be used to store, view, and share illegal images. <br /><br />
+<h1 class="mt-5 mb-3 font-semibold text-xl">The Definition</h1>
+Digital forensic science is a branch of forensic science that focuses on the recovery and investigation of material found in digital devices related to cybercrime. Digital forensics is the process of identifying, preserving, analyzing, and documenting digital evidence. This is done to present evidence in a court of law when required. <br /><br />
+The goal of the process is to preserve any evidence in its most original form while performing a structured investigation by collecting, identifying, and validating the digital information to reconstruct past events. It must be handled in a very specific way so that there is no opportunity for cybercriminals to tamper with the evidence. <br /><br />
+<h1 class="mt-5 mb-3 font-semibold text-xl">When Is Digital Forensic Investigation Needed?</h1>
+When there has been a security breach at a company, resulting in stolen data or altered data. A computer forensic analyst is needed to determine how attackers gained access to the network, where they traversed the network, and what they did on the network, whether they took information or planted malware. It is needed to recover data such as documents, photos, and emails from computer hard drives and other data storage devices, such as zip and flash drives, which may have been deleted, damaged, or otherwise manipulated.<br /><br />
+Will you want to wait until a cybercrime is committed before ensuring your company network is hacker-proof? Would you rather not be assured that your network does not already host to a malicious malware sitting duck until activated? This would be very dangerous. <br /><br />
+Have a chat with a Digital Forensic Expert today- Techspecialist Consulting limited, your Sherlock Holmes of IT.
+<p class="font-semibold">Footnote:</p>
+For more information read the article” Digital Forensics Market to Eyewitness Massive Growth by 2027” – available here
+`
+export default data_forensics

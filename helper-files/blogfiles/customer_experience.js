@@ -1,0 +1,16 @@
+const customer_experience = `
+<img src="/assets/img/blog/blog-img71.webp" alt='' /><br /><br />
+We all know how important customer service is, it is the very bloodline of any organization. Without customer service, we jeopardize our organization’s reputation, lose customers, and suffer profit losses. But have we ever taken time to reflect on Customer Experience, CX, as it is called? Oh, we should, especially if we consider doing profitable businesses in 2021. Why should we care?<br /><br />
+Because extensive surveys have shown that a staggering 86% of our customers are willing to abandon regular service providers for new ones who give them a memorable experience.<br /><br />
+<img src="/assets/img/blog/blog-img72.webp" alt='' /><br /><br />
+This might be a good time to state what customer experience is. It is the emotional connection a customer feels toward our brand or business because we were specific and proactive about their needs. It is showing personal interest. It takes an entire organization, from HR to Marketing to Customer relations officers to be deliberate about thinking about a specific customer’s need and being proactive about it! You care enough to imbibe in the culture of an organization the need to make each customer feel special because you remember their preferences, special celebrations, and everything that excites them! You are in a lasting relationship with them. “You are married to them!”- Patrick Bet-David. Customer experience is the next destination every organization that already values customer service wants to be at!<br /><br />
+But just how can you do that?<br /><br />
+First, understand who your customers are, create an emotional connection, take their feedback in real-time and act on it!<br /><br />
+Will it be worth the effort?<br /><br />
+Yes, everyone who has had a great experience with your product or service becomes your BEST RECRUITERS EVER! Their loyalty is unmatched.<br /><br />
+While customer service has all the right elements we seek; speed, affordability, luxury, high quality, user-friendly, customer experience creates memories, emotional connection, and high fidelity!<br /><br />
+Here is an example to buttress the difference, you are new in town, and have you ordered an uber ride. Your driver is on time, the car is decent, the ride is smooth but awkwardly quiet, you try to make small talk he replies in sentence word and when you disembark, he wishes you a great day- Good customer service. Contrast with a ride with a friendly driver engages in light conversation, asks about your interests, give you pointers on how to get around the city, show you the city’s monuments, and informs on lifestyle, finally at your destination, wishes you the best in your specific endeavor. No doubt you would have done one or both; taking down his number and giving him a good star rating.<br /><br />
+Which as a business will you rather be at the end of each transaction, one with a nice handshake or a 5-star rating? At Techspecialist Consulting Limited, we know what we get!<br /><br />
+<img src="/assets/img/blog/blog-img73.png" alt='' /><br /><br />`
+
+export default customer_experience

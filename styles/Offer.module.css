@@ -1,0 +1,150 @@
+.tab_content_wrap {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+
+.tab_content, .tab_content_active {
+  width: 100%;
+  background-color: #fff;
+  font-size: 20px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: light;
+  line-height: 35px;
+}
+
+.tab_image{
+  height: 100%;
+  width: 33.3%;
+  position: relative;
+}
+
+.tabs {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabs > div {
+  transition: all 0.5s ease-in;
+}
+
+.tabs > div:hover {
+  background-color: #ffa371;
+  color: white;
+}
+
+.active_tab,
+.tabs > div.active_tab:hover {
+  background-color: #ea7637;
+  color: white;
+}
+
+/* .tab_content img, .tab_content_active .tab_image {
+  width: 33.3%;
+  background-color: #fafafa;
+} */
+
+.tab_content > p, .tab_content_active > p {
+  width: 63%;
+  line-height: 2;
+}
+
+.tab_content_active {
+  opacity: 1;
+}
+
+.white-dim {
+  opacity: 0.8;
+}
+
+/* .particles_wrap {
+    z-index: -1;
+    width: 100%;
+    height: 500px;
+    position: absolute;
+} */
+
+@media (max-width: 1023px) {
+  .tab_content_wrap {
+    width: 100%;
+    height: 600px;
+    position: relative;
+  }
+
+  .tab_content, .tab_content_active {
+    display: block;
+    height: fit-content;
+  }
+
+  /* .tab_content img, .tab_content_active .tab_image {
+    max-height: 250px;
+    width: 100%;
+    background-color: #fafafa;
+  } */
+
+  .tab_content > p, .tab_content_active > p {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .tab_image{
+    height: 200px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+@media (max-width: 767px) {
+  .tab_content_wrap {
+    height: 500px;
+  }
+
+  .tab_content > p, .tab_content_active > p {
+    padding: 20px;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 650px) {
+  .tab_content_wrap {
+    height: 700px;
+  }
+}
+
+@media (max-width: 550px) {
+  .tab_content_wrap {
+    height: 700px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tab_content_wrap {
+    height: 800px;
+  }
+
+  .tabs > div {
+    font-size: 10px;
+  }
+}
+@media (max-width: 319px) {
+  .tab_content_wrap {
+    height: 900px;
+  }
+
+  .tabs > div {
+    font-size: 10px;
+  }
+}
