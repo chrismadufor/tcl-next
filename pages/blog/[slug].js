@@ -148,7 +148,7 @@ function BlogPage({post}) {
                 dangerouslySetInnerHTML={{__html: post.body.html}}
               ></div>
             </div>
-            <div className={`${styles.blog_side} pt-10 grid`}>
+            {/* <div className={`${styles.blog_side} pt-10 grid`}>
               <h1 className="mb-4 uppercase font-semibold text-xl text-center">
                 Recent Posts
               </h1>
@@ -177,7 +177,7 @@ function BlogPage({post}) {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
           <ContactSection />
           <Footer />
