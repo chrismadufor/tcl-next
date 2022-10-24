@@ -46,13 +46,18 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const slug = params.slug;
-  const data = await graphcms.request(QUERY, { slug });
-  const post = data.posts[0];
+  if (params && params.slug) {
+    const slug = params.slug;
+    const data = await graphcms.request(QUERY, { slug });
+    const post = data.posts[0];
+    return {
+      props: {
+        post,
+      },
+    };
+  }
   return {
-    props: {
-      post,
-    },
+    props: { error: true },
   };
 }
 

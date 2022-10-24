@@ -104,7 +104,9 @@
 }
 
 .blog_content {
-    width: 70%;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .blog_content_text > img {
