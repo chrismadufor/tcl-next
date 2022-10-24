@@ -40,8 +40,8 @@ const SLUGLIST = gql`
 export async function getStaticPaths() {
   const { posts } = await graphcms.request(SLUGLIST);
   return {
-    paths: posts.map((post) => ({ params: { slug: post.slug } })),
-    fallback: true,
+    paths: posts.map((post) => ({ params: { slug: post ? post.slug : null } })),
+    fallback: false,
   };
 }
 
