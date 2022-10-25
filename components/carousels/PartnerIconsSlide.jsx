@@ -51,8 +51,11 @@ function PartnerIconSlide() {
           {PartnerIcons.map((item, index) => (
             <div key={index}>
               <SwiperSlide className={styles.clientsIconSlide} key={index}>
-                <div className={`${styles.iconImgWrap} relative`} key={index}>
+                {/* <div className={`${styles.iconImgWrap} relative`} key={index}>
                   <Image src={item} layout="fill" alt="" />
+                </div> */}
+                <div key={index}>
+                  <img src={item} alt='' />
                 </div>
               </SwiperSlide>
             </div>

@@ -11,8 +11,10 @@ import clientStyles from "../../styles/Clients.module.css";
 import Image from "next/image";
 
 function CaseStudies() {
-  // const [thumbsSwiper, setThumbsSwiper] = useState({});
-  // useEffect(() => {}, [thumbsSwiper])
+  let [thumbsSwiper, setThumbsSwiper] = useState(null);
+  useEffect(()=>{
+    console.log("Thumbs changed")
+  }, [thumbsSwiper])
   return (
     <section
       className={`${clientStyles.caseStudiesWrap} bg-white flex flex-col-reverse md:flex-col`}
@@ -28,7 +30,7 @@ function CaseStudies() {
           freeMode={true}
           spaceBetween={10}
           navigation={true}
-          // thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : null}
+          thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
           modules={[FreeMode, Navigation, Thumbs, Autoplay]}
           autoplay={{
             delay: 4000,
@@ -60,7 +62,6 @@ function CaseStudies() {
       </div>
       <div className="border-t border-gray-100">
         <Swiper
-          // onSwiper={setThumbsSwiper}
           loop={true}
           speed={1000}
           breakpoints={{
@@ -78,11 +79,12 @@ function CaseStudies() {
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs]}
+          onSwiper={setThumbsSwiper}
           className="mySwiper swiper-thumbs bg-gray-100 cursor-pointer"
         >
           {caseStudies.map((item, index) => (
             <SwiperSlide key={index}>
-              <img src={item.thumb} alt={item.title} layout="fill"/>
+              <img src={item.thumb} alt={item.title} />
             </SwiperSlide>
           ))}
         </Swiper>

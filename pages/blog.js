@@ -25,7 +25,8 @@ const QUERY = gql`
 `
 
 export async function getStaticProps() {
-    const {posts} = await graphcms.request(QUERY);
+    let {posts} = await graphcms.request(QUERY);
+    posts = posts.reverse()
     return {
       props: {
         posts,
@@ -60,6 +61,9 @@ function Blog({posts}) {
         <meta name="twitter:site" content="@tclafrica" />
         <meta name="twitter:creator" content="@tclafrica"></meta>
         <link rel="icon" href="/logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -82,7 +86,7 @@ function Blog({posts}) {
             key={index}
             img={post.featuredImage.url}
             author={post.author}
-            date={post.datePublished}
+            date={new Date(post.datePublished).toDateString().slice(4)}
             title={post.title}
             id={post.id}
             slug={post.slug}

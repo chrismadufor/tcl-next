@@ -40,6 +40,9 @@ export default function Home() {
         <meta name="twitter:site" content="@tclafrica" />
         <meta name="twitter:creator" content="@tclafrica"></meta>
         {/* <link rel="canonical" href="https://example.com/" /> */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet" />
         <link rel="icon" href="/logo.png" />
         <link
           rel="stylesheet"

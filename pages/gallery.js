@@ -5,6 +5,34 @@ import Footer from "../components/common/Footer";
 import styles from "../styles/Resources.module.css";
 import ContactSection from "../components/ContactSection";
 import exportedPictures from '../helper-files/gallery';
+// import { GraphQLClient, gql} from 'graphql-request'
+
+// const graphcms = new GraphQLClient('https://api-eu-west-2.hygraph.com/v2/cl8oydu3r1ivt01un5k9uek4q/master')
+
+// const QUERY = gql`
+// {
+//   posts {
+//     author
+//     slug
+//     id
+//     title
+//     featuredImage {
+//       url
+//     }
+//     datePublished
+//   }
+// }
+// `
+
+// export async function getStaticProps() {
+//     let {posts} = await graphcms.request(QUERY);
+//     posts = posts.reverse()
+//     return {
+//       props: {
+//         posts,
+//       },
+//     }
+//   }
 
 function Gallery() {
 
@@ -87,6 +115,9 @@ function Gallery() {
         <meta name="twitter:site" content="@tclafrica" />
         <meta name="twitter:creator" content="@tclafrica"></meta>
         <link rel="icon" href="/logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
