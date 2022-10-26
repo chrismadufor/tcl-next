@@ -7,6 +7,7 @@ import styles from "../../styles/Resources.module.css";
 import { useRouter } from "next/router";
 import ContactSection from "../../components/ContactSection";
 import { GraphQLClient, gql } from "graphql-request";
+import SharePost from "../../components/SharePost";
 
 const graphcms = new GraphQLClient(
   "https://api-eu-west-2.hygraph.com/v2/cl8oydu3r1ivt01un5k9uek4q/master"
@@ -41,7 +42,7 @@ export async function getStaticPaths() {
   const { posts } = await graphcms.request(SLUGLIST);
   return {
     paths: posts.map((post) => ({ params: { slug: post ? post.slug : null } })),
-    fallback: false,
+    fallback: "blocking",
   };
 }
 
@@ -50,10 +51,16 @@ export async function getStaticProps({ params }) {
     const slug = params.slug;
     const data = await graphcms.request(QUERY, { slug });
     const post = data.posts[0];
+    if(!post) {
+      return {
+        notFound: true
+      }
+    }
     return {
       props: {
         post,
       },
+      revalidate: 600,
     };
   }
   return {
@@ -81,7 +88,7 @@ function BlogPage({ post }) {
           />
           <meta
             property="og:url"
-            content={`https://techspecialistlimited.com/blog/${post.slug}`}
+            content={`https://tcl-next-chrismadufor.vercel.app/blog/${post.slug}`}
           />
           <meta property="og:title" content={`${post.title}`} />
           {/* <meta property="og:description" content={blogMeta} /> */}
@@ -128,6 +135,7 @@ function BlogPage({ post }) {
               className={`text-gray-700 text-sm ${styles.blog_content_text} leading-loose py-10`}
               dangerouslySetInnerHTML={{ __html: post.body.html }}
             ></div>
+            <SharePost slug={post.slug} />
           </div>
         </div>
         <ContactSection />

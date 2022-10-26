@@ -24,22 +24,22 @@ function Header() {
 
   let [headerStyles, setHeaderStyles] = useState(false);
 
-  useEffect(()=>{
-    window.onscroll = function() {
-      if (document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50) {
+  useEffect(() => {
+    window.onscroll = function () {
+      if (
+        document.body.scrollTop >= 50 ||
+        document.documentElement.scrollTop >= 50
+      ) {
         if (!headerStyles) {
-          return setHeaderStyles(true)
+          return setHeaderStyles(true);
         }
-      }
-      else {
+      } else {
         if (headerStyles) {
-          return setHeaderStyles(false)
+          return setHeaderStyles(false);
         }
       }
-    }
-  })
-
-  
+    };
+  });
 
   return (
     <>
@@ -78,33 +78,51 @@ function Header() {
               Our Solutions
               <ul className="dropdown">
                 <Link href="/it-support">
-                  <li>IT Support</li>
+                  <a>
+                    <li>IT Support</li>
+                  </a>
                 </Link>
                 <Link href="/cyber-security">
-                  <li>Cyber Security</li>
+                  <a>
+                    <li>Cyber Security</li>
+                  </a>
                 </Link>
                 <Link href="/cloud-services">
-                  <li>Cloud Services</li>
+                  <a>
+                    <li>Cloud Services</li>
+                  </a>
                 </Link>
               </ul>
             </li>
             <Link href="/clients">
-              <li className="mx-3 p-2 font-semibold  cursor-pointer">Clients</li>
+              <a>
+                <li className="mx-3 p-2 font-semibold  cursor-pointer">
+                  Clients
+                </li>
+              </a>
             </Link>
             <Link href="/company">
-              <li className="mx-3 p-2 font-semibold cursor-pointer">About Us</li>
+              <a>
+                <li className="mx-3 p-2 font-semibold cursor-pointer">
+                  About Us
+                </li>
+              </a>
             </Link>
             <li className="dropdown-link relative mx-3 p-2 font-semibold cursor-pointer">
               Media
               <ul className="dropdown">
                 <Link href="/blog">
-                  <li>Blog</li>
+                  <a>
+                    <li>Blog</li>
+                  </a>
                 </Link>
                 {/* <Link href="videos">
                   <li>Videos</li>
                 </Link> */}
                 <Link href="/gallery">
-                  <li>Gallery</li>
+                  <a>
+                    <li>Gallery</li>
+                  </a>
                 </Link>
               </ul>
             </li>
@@ -131,9 +149,11 @@ function Header() {
         <header className="flex justify-between items-center h-20 px-5 md:px-12 border-b border-gray-200">
           <div className="logo logo w-32">
             <Link href="/">
-              <div onClick={() => toggleMobileNav()}>
-                <img src="/assets/img/tcl-logo main.png" alt="tcl logo" />
-              </div>
+              <a>
+                <div onClick={() => toggleMobileNav()}>
+                  <img src="/assets/img/tcl-logo main.png" alt="tcl logo" />
+                </div>
+              </a>
             </Link>
           </div>
           <i
@@ -158,47 +178,58 @@ function Header() {
             className={openServices ? "mobile-dropdown" : "h-0 overflow-hidden"}
           >
             <Link href="/it-support">
-              <li
-                className="w-full flex items-center border-b border-gray-200 p-5 md:px-12"
-                onClick={() => toggleMobileNav()}
-              >
-                <i className="fas fa-angles-right text-xs mr-3"></i> IT Support
-              </li>
+              <a>
+                <li
+                  className="w-full flex items-center border-b border-gray-200 p-5 md:px-12"
+                  onClick={() => toggleMobileNav()}
+                >
+                  <i className="fas fa-angles-right text-xs mr-3"></i> IT
+                  Support
+                </li>
+              </a>
             </Link>
             <Link href="/cyber-security">
-              <li
-                className="w-full flex items-center border-b border-gray-200 p-5 md:px-12"
-                onClick={() => toggleMobileNav()}
-              >
-                <i className="fas fa-angles-right text-xs mr-3"></i> Cyber
-                Security
-              </li>
+              <a>
+                <li
+                  className="w-full flex items-center border-b border-gray-200 p-5 md:px-12"
+                  onClick={() => toggleMobileNav()}
+                >
+                  <i className="fas fa-angles-right text-xs mr-3"></i> Cyber
+                  Security
+                </li>
+              </a>
             </Link>
             <Link href="/cloud-services">
-              <li
-                className="w-full flex items-center border-b border-gray-200 p-5 md:px-12"
-                onClick={() => toggleMobileNav()}
-              >
-                <i className="fas fa-angles-right text-xs mr-3"></i> Cloud
-                Services
-              </li>
+              <a>
+                <li
+                  className="w-full flex items-center border-b border-gray-200 p-5 md:px-12"
+                  onClick={() => toggleMobileNav()}
+                >
+                  <i className="fas fa-angles-right text-xs mr-3"></i> Cloud
+                  Services
+                </li>
+              </a>
             </Link>
           </ul>
           <Link href="/clients" className="bg-gray-400">
-            <p
-              className="w-full border-b border-gray-200 p-5 md:px-12"
-              onClick={() => toggleMobileNav()}
-            >
-              Clients
-            </p>
+            <a>
+              <p
+                className="w-full border-b border-gray-200 p-5 md:px-12"
+                onClick={() => toggleMobileNav()}
+              >
+                Clients
+              </p>
+            </a>
           </Link>
           <Link href="/company" className="bg-gray-400">
-            <p
-              className="w-full border-b border-gray-200 p-5 md:px-12"
-              onClick={() => toggleMobileNav()}
-            >
-              About Us
-            </p>
+            <a>
+              <p
+                className="w-full border-b border-gray-200 p-5 md:px-12"
+                onClick={() => toggleMobileNav()}
+              >
+                About Us
+              </p>
+            </a>
           </Link>
           <p
             className="w-full flex items-center justify-between border-b border-gray-200 p-5 md:px-12"
@@ -217,20 +248,24 @@ function Header() {
             }
           >
             <Link href="/blog">
-              <li
-                className="w-full flex items-center border-b border-gray-200 p-5 md:px-12"
-                onClick={() => toggleMobileNav()}
-              >
-                <i className="fas fa-angles-right text-xs mr-3"></i> Blog
-              </li>
+              <a>
+                <li
+                  className="w-full flex items-center border-b border-gray-200 p-5 md:px-12"
+                  onClick={() => toggleMobileNav()}
+                >
+                  <i className="fas fa-angles-right text-xs mr-3"></i> Blog
+                </li>
+              </a>
             </Link>
             <Link href="/gallery">
-              <li
-                className="w-full flex items-center border-b border-gray-200 p-5 md:px-12"
-                onClick={() => toggleMobileNav()}
-              >
-                <i className="fas fa-angles-right text-xs mr-3"></i> Gallery
-              </li>
+              <a>
+                <li
+                  className="w-full flex items-center border-b border-gray-200 p-5 md:px-12"
+                  onClick={() => toggleMobileNav()}
+                >
+                  <i className="fas fa-angles-right text-xs mr-3"></i> Gallery
+                </li>
+              </a>
             </Link>
           </ul>
         </nav>
