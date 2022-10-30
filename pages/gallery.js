@@ -5,37 +5,35 @@ import Footer from "../components/common/Footer";
 import styles from "../styles/Resources.module.css";
 import ContactSection from "../components/ContactSection";
 import exportedPictures from '../helper-files/gallery';
-// import { GraphQLClient, gql} from 'graphql-request'
+import { GraphQLClient, gql} from 'graphql-request'
 
-// const graphcms = new GraphQLClient('https://api-eu-west-2.hygraph.com/v2/cl8oydu3r1ivt01un5k9uek4q/master')
+const graphcms = new GraphQLClient('https://api-eu-west-2.hygraph.com/v2/cl8oydu3r1ivt01un5k9uek4q/master')
 
-// const QUERY = gql`
-// {
-//   posts {
-//     author
-//     slug
-//     id
-//     title
-//     featuredImage {
-//       url
-//     }
-//     datePublished
-//   }
-// }
-// `
+const QUERY = gql`
+{
+  pictures(first:200){
+    id
+    name
+    description
+    image{
+      url
+    }
+  }
+}
+`
 
-// export async function getStaticProps() {
-//     let {posts} = await graphcms.request(QUERY);
-//     posts = posts.reverse()
-//     return {
-//       props: {
-//         posts,
-//       },
-//     }
-//   }
+export async function getStaticProps() {
+    let {pictures} = await graphcms.request(QUERY);
+    pictures = pictures.reverse()
+    return {
+      props: {
+        pictures,
+      },
+    }
+  }
 
-function Gallery() {
-
+function Gallery({pictures}) {
+  console.log(pictures)
   let [hasPictures, setHasPictures] = useState(false)
   let [activeSlide, setActiveSlide] = useState(0)
   let [showGallery, setShowGallery] = useState(false)
@@ -135,9 +133,9 @@ function Gallery() {
           <p>Nothing to see here</p></div> : 
         <div className={`${styles.galleryWrap} grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4 lg:gap-7`}>
           {
-            exportedPictures.map((picture, index) => (
+            pictures.map((picture, index) => (
               <div key={index}>
-                <img onClick={() => changeActiveSlide(index)} src={picture} alt="" className='cursor-pointer h-full obj-cover' />
+                <img onClick={() => changeActiveSlide(index)} src={picture.image.url} alt="" className='cursor-pointer h-full obj-cover' />
               </div>
             ))
           }
@@ -147,9 +145,9 @@ function Gallery() {
       <div className= {showGallery ? styles.slideshow : "hidden"}>
         <div ref={slidesWrap} className={`${styles.slideshow_wrap} bg-gray-700`}>
         {
-          exportedPictures.map((picture, index) => (
+          pictures.map((picture, index) => (
             <div key={index}>
-              <img src={picture} alt="" />
+              <img src={picture.image.url} alt="" />
             </div>
           ))
         }

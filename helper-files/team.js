@@ -20,7 +20,7 @@ export const otherTeam = [
     {
         name: 'Etido Ekwere',
         title: 'Lead, Business Development',
-        pic: "/assets/img/team/etido.jpg"
+        pic: "/assets/img/team/etido.png"
     },
     {
         name: 'Paul Nwachukwu',
@@ -45,7 +45,7 @@ export const otherTeam = [
     {
         name: 'Ijeoma Nwosu',
         title: 'Admin/Operations',
-        pic: "/assets/img/team/ijeoma.jpeg"
+        pic: "/assets/img/team/ijeoma.png"
     },
     {
         name: 'Temitope Ayeni',
@@ -55,7 +55,7 @@ export const otherTeam = [
     {
         name: 'Ayokunumi Orimolade',
         title: 'IT Support',
-        pic: "/assets/img/team/ayokunumi.jpeg"
+        pic: "/assets/img/team/ayokunumi.png"
     },
     {
         name: 'Ahmed Yakub',

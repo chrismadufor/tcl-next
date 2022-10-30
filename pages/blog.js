@@ -11,7 +11,7 @@ import { GraphQLClient, gql} from 'graphql-request'
 const graphcms = new GraphQLClient('https://api-eu-west-2.hygraph.com/v2/cl8oydu3r1ivt01un5k9uek4q/master')
 const QUERY = gql`
 {
-  posts {
+  posts(first:100){
     author
     slug
     id
