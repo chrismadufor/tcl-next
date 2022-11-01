@@ -91,7 +91,7 @@ function Footer() {
           
         </div>
       </div>
-      <p className="text-center text-xs"> &copy; 2022 Techspecialist Consulting Limited</p>
+      <p className="text-center text-xs"> &copy; 2022 Techspecialist Consulting Limited | ...Bridging the gap between users and technology</p>
     </footer>
   );
 }

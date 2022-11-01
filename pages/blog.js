@@ -3,7 +3,6 @@ import Head from "next/head";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/Resources.module.css";
-import blogPosts from "../helper-files/blogpost-files";
 import ContactSection from "../components/ContactSection";
 import Blogpost from "../components/Blogpost";
 import { GraphQLClient, gql} from 'graphql-request'
@@ -38,7 +37,7 @@ function Blog({posts}) {
   return (
     <div>
       <Head>
-        <title>Techspecialist Blog | Techspecialist Consulting Limited</title>
+        <title>Techspecialist Blog | {process.env.NEXT_PUBLIC_APP_NAME}</title>
         <meta name="description" content="The Techspecialist Blog" />
         <meta
           name="keywords"
@@ -62,7 +61,7 @@ function Blog({posts}) {
         <meta name="twitter:creator" content="@tclafrica"></meta>
         <link rel="icon" href="/logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet" />
         <link
           rel="stylesheet"

@@ -8,27 +8,28 @@ import {
   TwitterIcon,
 } from "react-share";
 
-function SharePost({ slug }) {
+function SharePost({ title, slug }) {
   return (
     <div className="mt-3">
         <h1 className="mb-3 text-gray-700">Hope you enjoyed reading this post. Share with your friends.</h1>
       <div>
         <FacebookShareButton
-          url={`https://tcl-next-chrismadufor.vercel.app/blog/${slug}`}
+          url={`${process.env.NEXT_PUBLIC_APP_URL}/blog/${slug}`}
+          title={title}
           className="mr-2"
         >
           <FacebookIcon size={40} round />
         </FacebookShareButton>
         <LinkedinShareButton
-          url={`https://tcl-next-chrismadufor.vercel.app/blog/${slug}`}
-          title="Check out this post on the Techspecialist Blog"
+          url={`${process.env.NEXT_PUBLIC_APP_URL}/blog/${slug}`}
+          title={title}
           className="mr-2"
         >
           <LinkedinIcon size={40} round />
         </LinkedinShareButton>
         <TwitterShareButton
-          url={`https://tcl-next-chrismadufor.vercel.app/blog/${slug}`}
-          title="Check out this post on the Techspecialist Blog"
+          url={`${process.env.NEXT_PUBLIC_APP_URL}/blog/${slug}`}
+          title={title}
         >
           <TwitterIcon size={40} round />
         </TwitterShareButton>
@@ -36,5 +37,4 @@ function SharePost({ slug }) {
     </div>
   );
 }
-
 export default SharePost;

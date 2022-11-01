@@ -4,7 +4,6 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/Resources.module.css";
 import ContactSection from "../components/ContactSection";
-import exportedPictures from '../helper-files/gallery';
 import { GraphQLClient, gql} from 'graphql-request'
 
 const graphcms = new GraphQLClient('https://api-eu-west-2.hygraph.com/v2/cl8oydu3r1ivt01un5k9uek4q/master')
@@ -94,7 +93,7 @@ function Gallery({pictures}) {
   return (
     <div>
       <Head>
-        <title>Gallery | Techspecialist Consulting Limited</title>
+        <title>Gallery | {process.env.NEXT_PUBLIC_APP_NAME}</title>
         <meta name="description" content="Techspecialist Gallery" />
         <meta property="og:url" content="https://techspecialistlimited.com/gallery" />
         <meta property="og:title" content="Gallery | Techspecialist Consulting Limited" />
@@ -114,7 +113,7 @@ function Gallery({pictures}) {
         <meta name="twitter:creator" content="@tclafrica"></meta>
         <link rel="icon" href="/logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet" />
         <link
           rel="stylesheet"
