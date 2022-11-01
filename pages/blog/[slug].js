@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import blogPosts from "../../helper-files/blogpost-files";
 import Head from "next/head";
 import Header from "../../components/common/Header";
@@ -79,7 +79,7 @@ function BlogPage({ post }) {
     <div>
       <div>
         <Head>
-          <title> {`${post.title}`}</title>
+          <title> TCL | {`${post.title}`}</title>
           {/* <meta name="description" content={blogMeta} /> */}
           <meta
             name="keywords"
@@ -100,7 +100,7 @@ function BlogPage({ post }) {
           <meta name="twitter:creator" content="@tclafrica"></meta>
           <link rel="icon" href="/logo.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap"
             rel="stylesheet"
@@ -134,7 +134,10 @@ function BlogPage({ post }) {
               className={`text-gray-700 text-sm ${styles.blog_content_text} leading-loose py-10`}
               dangerouslySetInnerHTML={{ __html: post.body.html }}
             ></div>
-            <SharePost slug={post.slug} />
+            <SharePost
+              title={post.title}
+              slug={post.slug}
+            />
           </div>
         </div>
         <ContactSection />

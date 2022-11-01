@@ -16,14 +16,14 @@ function Clients() {
   return (
     <div>
       <Head>
-        <title>Meet our Clients | Techspecialist Consulting Limited</title>
+        <title>Meet our Clients | {process.env.NEXT_PUBLIC_APP_NAME}</title>
         <meta name="description" content="Top class organsiations and established companies have chosen Techspecialist as a reliable IT partner." />
         <meta
           name="keywords"
           content="Techspecialist, tech specialist, tech,cyber security, cyber, security, cloud, IT support, IT, IT services, Infrastructure, Tech Advisory,techspecialist,IT Abuja,Software,Software Abuja,cloud computing, Tech Nigeria, Tech company Monitoring, Continous Testing, Improvement, Backups, Problem Management, Capacity Management, Incident Mangement, Application Knowledge, First Level Support, Second Level Support, Third Level Support, Configuration Management, Release and Deployment"
         />
         <meta property="og:url" content="https://techspecialistlimited.com/clients" />
-        <meta property="og:title" content="Meet our Clients | Techspecialist Consulting Limited" />
+        <meta property="og:title" content="Meet our Clients | {process.env.NEXT_PUBLIC_APP_NAME}" />
         <meta
           property="og:description"
           content="We are an IT service delivery firm that assists enterprise organizations with cutting-edge IT managed services to enhance personnel productivity and efficiency."
@@ -40,7 +40,7 @@ function Clients() {
         <meta name="twitter:creator" content="@tclafrica"></meta>
         <link rel="icon" href="/logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet" />
         <link
           rel="stylesheet"

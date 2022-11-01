@@ -13,7 +13,7 @@ function CyberSecurity() {
   return (
     <div>
       <Head>
-        <title>Cyber Security | Techspecialist Consulting Limited</title>
+        <title>Cyber Security | {process.env.NEXT_PUBLIC_APP_NAME}</title>
         <meta name="description" content="Our cybersecurity specialists hunt for threats, monitor data and alerts from your environments, and flag anomalies 24/7 with the aid of modern detection technology. We help you protect all your workstations, servers, cloud services, IoT devices, and your digital environments." />
         <meta
           name="keywords"
@@ -37,7 +37,7 @@ function CyberSecurity() {
         <meta name="twitter:creator" content="@tclafrica"></meta>
         <link rel="icon" href="/logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet" />
         <link
           rel="stylesheet"

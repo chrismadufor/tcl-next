@@ -45,20 +45,21 @@ function ContactSection() {
         const data = {...values, phone: phoneNum}
         emailjs
           .send(
-            process.env.REACT_APP_SERVICEID,
-            process.env.REACT_APP_TEMPLATEID,
+            process.env.NEXT_PUBLIC_EMAILJS_APP_SERVICE_ID,
+            process.env.NEXT_PUBLIC_EMAILJS_APP_TEMPLATE_ID,
             data,
-            process.env.REACT_APP_PUBLICKEY
+            process.env.NEXT_PUBLIC_EMAILJS_APP_PUBLIC_KEY
           )
           .then(
             (result) => {
               console.log(result.text);
+              alert("Thank you for reaching out. We will contact you shortly.");
             },
             (error) => {
               console.log(error.text);
+              alert("OPPS! Something went wrong. Refresh and try again.");
             }
           );
-        alert("Thank you for reaching out. We will contact you shortly.");
         setSubmitting(false);
       }, 400);
       setPhoneNum("")

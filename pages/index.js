@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import Header from "../components/common/Header";
 import Awards from "../components/common/Awards";
 import Footer from "../components/common/Footer";
@@ -13,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Techspecialist Consulting Limited</title>
+        <title>{process.env.NEXT_PUBLIC_APP_NAME}</title>
         <meta
           name="description"
           content="We are an IT service delivery firm that assists enterprise organizations with cutting-edge IT managed services to enhance personnel productivity and efficiency."
@@ -41,7 +39,7 @@ export default function Home() {
         <meta name="twitter:creator" content="@tclafrica"></meta>
         {/* <link rel="canonical" href="https://example.com/" /> */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet" />
         <link rel="icon" href="/logo.png" />
         <link

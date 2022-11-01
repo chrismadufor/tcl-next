@@ -13,7 +13,7 @@ function CloudSecurity() {
   return (
     <div>
       <Head>
-        <title>Cloud Services | Techspecialist Consulting Limited</title>
+        <title>Cloud Services | {process.env.NEXT_PUBLIC_APP_NAME}</title>
         <meta name="description" content="We are a Cloud Ecosystem Integrator and have the expertise and domain knowledge to consult, design, build, integrate and manage a shared multi-tenant Private Cloud Infrastructure that is highly efficient, automated and virtualized." />
         <meta
           name="keywords"
@@ -37,7 +37,7 @@ function CloudSecurity() {
         <meta name="twitter:creator" content="@tclafrica"></meta>
         <link rel="icon" href="/logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet" />
         <link
           rel="stylesheet"
