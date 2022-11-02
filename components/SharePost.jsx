@@ -25,8 +25,6 @@ function SharePost({ title, summary, slug }) {
           title={title}
           summary={summary}
           source={"Techspecialist Blog"}
-          windowHeight={"100vh"}
-          windowWidth={"100vw"}
           className="mr-2"
         >
           <LinkedinIcon size={40} round />
