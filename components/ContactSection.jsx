@@ -3,11 +3,8 @@ import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-// import emailJsInfo from "../../helper-files/emailJsFile";
 
 function ContactSection() {
-
-  // const {serviceId, templateId, publicKey} = emailJsInfo
   const [phoneNum, setPhoneNum] = useState("");
   const form = useRef();
   const formik = useFormik({
@@ -52,12 +49,10 @@ function ContactSection() {
           )
           .then(
             (result) => {
-              console.log(result.text);
               alert("Thank you for reaching out. We will contact you shortly.");
             },
             (error) => {
-              console.log(error.text);
-              alert("OPPS! Something went wrong. Refresh and try again.");
+              alert("Oops! Something went wrong. Refresh and try again.");
             }
           );
         setSubmitting(false);

@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { PartnerIcons } from "./iconsFile";
 import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "../../styles/Carousel.module.css";
-import globalStyles from "../../styles/Global.module.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 function PartnerIconSlide() {
+  const [images, setImages] = useState([])
+  useEffect(() => {setImages(PartnerIcons)}, [])
   return (
     <section className="pb-10 sm:pb-12">
       <div className="who-we-are text-center text-gray-700 mb-10 sm:mb-10 mx-auto">
@@ -48,14 +49,11 @@ function PartnerIconSlide() {
             },
           }}
         >
-          {PartnerIcons.map((item, index) => (
+          {images.map((item, index) => (
             <div key={index}>
               <SwiperSlide className={styles.clientsIconSlide} key={index}>
-                {/* <div className={`${styles.iconImgWrap} relative`} key={index}>
-                  <Image src={item} layout="fill" alt="" />
-                </div> */}
                 <div key={index}>
-                  <img src={item} alt='' />
+                  <img src={item.name} alt='' />
                 </div>
               </SwiperSlide>
             </div>

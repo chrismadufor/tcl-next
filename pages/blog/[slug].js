@@ -4,13 +4,12 @@ import Head from "next/head";
 import Header from "../../components/common/Header";
 import Footer from "../../components/common/Footer";
 import styles from "../../styles/Resources.module.css";
-import { useRouter } from "next/router";
 import ContactSection from "../../components/ContactSection";
 import { GraphQLClient, gql } from "graphql-request";
 import SharePost from "../../components/SharePost";
 
 const graphcms = new GraphQLClient(
-  "https://api-eu-west-2.hygraph.com/v2/cl8oydu3r1ivt01un5k9uek4q/master"
+  process.env.NEXT_APP_GCMS_URL
 );
 const QUERY = gql`
   query Posts($slug: String!) {
@@ -26,6 +25,7 @@ const QUERY = gql`
       body {
         html
       }
+      summary
     }
   }
 `;
@@ -73,14 +73,12 @@ function BlogPage({ post }) {
   for (let i = 0; i < count; i++) {
     sidePosts.push(blogPosts[blogPosts.length - 1 - i]);
   }
-  const router = useRouter();
-  let routeSlug = router.asPath.replace("/blog/", "");
   return (
     <div>
       <div>
         <Head>
           <title> TCL | {`${post.title}`}</title>
-          {/* <meta name="description" content={blogMeta} /> */}
+          <meta name="description" content={`${post.summary}`} />
           <meta
             name="keywords"
             content="Techspecialist, blog, techspecialist blog, tech specialist, tech,cyber security, cyber, security, cloud, IT support, IT, IT services, Infrastructure, Tech Advisory,techspecialist,IT Abuja,Software,Software Abuja,cloud computing, Tech Nigeria, Tech company Monitoring, Continous Testing, Improvement, Backups, Problem Management, Capacity Management, Incident Mangement, Application Knowledge, First Level Support, Second Level Support, Third Level Support, Configuration Management, Release and Deployment"
@@ -90,25 +88,14 @@ function BlogPage({ post }) {
             content={`https://tcl-next-chrismadufor.vercel.app/blog/${post.slug}`}
           />
           <meta property="og:title" content={`${post.title}`} />
-          {/* <meta property="og:description" content={blogMeta} /> */}
+          <meta property="og:description" content={`${post.summary}`} />
           <meta property="og:image" content={post.featuredImage.url} />
           <meta property="og:type" content="website" />
           <meta name="twitter:title" content={post.title} />
-          {/* <meta name="twitter:description" content={blogMeta} /> */}
+          <meta name="twitter:description" content={`${post.summary}`} />
           <meta name="twitter:image" content={post.featuredImage.url} />
           <meta name="twitter:site" content="@tclafrica" />
           <meta name="twitter:creator" content="@tclafrica"></meta>
-          <link rel="icon" href="/logo.png" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-          />
         </Head>
         <Header />
         <div
@@ -137,6 +124,7 @@ function BlogPage({ post }) {
             <SharePost
               title={post.title}
               slug={post.slug}
+              summary={post.summary}
             />
           </div>
         </div>

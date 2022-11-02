@@ -6,7 +6,7 @@ import styles from "../styles/Resources.module.css";
 import ContactSection from "../components/ContactSection";
 import { GraphQLClient, gql} from 'graphql-request'
 
-const graphcms = new GraphQLClient('https://api-eu-west-2.hygraph.com/v2/cl8oydu3r1ivt01un5k9uek4q/master')
+const graphcms = new GraphQLClient(process.env.NEXT_APP_GCMS_URL)
 
 const QUERY = gql`
 {
@@ -32,7 +32,6 @@ export async function getStaticProps() {
   }
 
 function Gallery({pictures}) {
-  console.log(pictures)
   let [hasPictures, setHasPictures] = useState(false)
   let [activeSlide, setActiveSlide] = useState(0)
   let [showGallery, setShowGallery] = useState(false)
@@ -111,14 +110,6 @@ function Gallery({pictures}) {
         <meta name="twitter:image" content="/logo.png" />
         <meta name="twitter:site" content="@tclafrica" />
         <meta name="twitter:creator" content="@tclafrica"></meta>
-        <link rel="icon" href="/logo.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        />
       </Head>
       <Header />
       <div className={`${styles.hero_bg} relative`}>

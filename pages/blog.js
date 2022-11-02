@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import Head from "next/head";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
@@ -7,7 +7,7 @@ import ContactSection from "../components/ContactSection";
 import Blogpost from "../components/Blogpost";
 import { GraphQLClient, gql} from 'graphql-request'
 
-const graphcms = new GraphQLClient('https://api-eu-west-2.hygraph.com/v2/cl8oydu3r1ivt01un5k9uek4q/master')
+const graphcms = new GraphQLClient(process.env.NEXT_APP_GCMS_URL)
 const QUERY = gql`
 {
   posts(first:100){
@@ -44,7 +44,7 @@ function Blog({posts}) {
           content="Techspecialist,blog, techspecialist blog, tech specialist, tech,cyber security, cyber, security, cloud, IT support, IT, IT services, Infrastructure, Tech Advisory,techspecialist,IT Abuja,Software,Software Abuja,cloud computing, Tech Nigeria, Tech company, Connect, Install, Network, Boot, BIOS, Login, Download, Update, Troubleshoot, Online, Support, reset, setup, configure, ticket, user, incidemt, advised, assisted, resolved, closed-out, escalate"
         />
         <meta property="og:url" content="https://techspecialistlimited.com/blog" />
-        <meta property="og:title" content="Techspecialist Blog" />
+        <meta property="og:title" content="The Techspecialist Blog" />
         <meta
           property="og:description"
           content="The Techspecialist Blog"
@@ -59,14 +59,6 @@ function Blog({posts}) {
         <meta name="twitter:image" content="/logo.png" />
         <meta name="twitter:site" content="@tclafrica" />
         <meta name="twitter:creator" content="@tclafrica"></meta>
-        <link rel="icon" href="/logo.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        />
       </Head>
       <Header />
       <div className={`${styles.hero_bg} relative`}>

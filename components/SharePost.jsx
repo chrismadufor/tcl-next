@@ -8,7 +8,7 @@ import {
   TwitterIcon,
 } from "react-share";
 
-function SharePost({ title, slug }) {
+function SharePost({ title, summary, slug }) {
   return (
     <div className="mt-3">
         <h1 className="mb-3 text-gray-700">Hope you enjoyed reading this post. Share with your friends.</h1>
@@ -23,6 +23,10 @@ function SharePost({ title, slug }) {
         <LinkedinShareButton
           url={`${process.env.NEXT_PUBLIC_APP_URL}/blog/${slug}`}
           title={title}
+          summary={summary}
+          source={"Techspecialist Blog"}
+          windowHeight={"100vh"}
+          windowWidth={"100vw"}
           className="mr-2"
         >
           <LinkedinIcon size={40} round />

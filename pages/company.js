@@ -42,14 +42,6 @@ function Company() {
         <meta name="twitter:image" content="/logo.png" />
         <meta name="twitter:site" content="@tclafrica" />
         <meta name="twitter:creator" content="@tclafrica"></meta>
-        <link rel="icon" href="/logo.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;700&display=swap" rel="stylesheet" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        />
       </Head>
       <main>
         <Header />
@@ -129,8 +121,8 @@ function Company() {
             <div
               className={`${styles.values_wrap} flex flex-wrap items-center justify-center`}
             >
-              {values.map((item) => (
-                <div className={`${styles.value_item}`}>
+              {values.map((item, index) => (
+                <div key={index} className={`${styles.value_item}`}>
                   <img src={item.image} alt="" />
                   <p>{item.name}</p>
                 </div>

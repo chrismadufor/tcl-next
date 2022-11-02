@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ClientIcons from './iconsFile'
 import { Autoplay, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,6 +10,8 @@ import styles from '../../styles/Carousel.module.css'
 import Link from 'next/link';
 
 function ClientsIconSlide() {
+  const [images, setImages] = useState([])
+  useEffect(() => {setImages(ClientIcons)}, [])
   return (
     <section className={styles.clientsIconWrap}>
       <Swiper
@@ -44,7 +46,7 @@ function ClientsIconSlide() {
         }
       >
         {
-          ClientIcons.map((item, index) => (
+          images.map((item, index) => (
             <SwiperSlide className={styles.clientsIconSlide} key={index}>
               <div>
                 {item.map((image, index) => (

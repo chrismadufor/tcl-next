@@ -11,9 +11,10 @@ import clientStyles from "../../styles/Clients.module.css";
 import Image from "next/image";
 
 function CaseStudies() {
+  const [images, setImages] = useState([])
+  useEffect(() => {setImages(caseStudies)}, [])
   let [thumbsSwiper, setThumbsSwiper] = useState(null);
   useEffect(()=>{
-    console.log("Thumbs changed")
   }, [thumbsSwiper])
   return (
     <section
@@ -38,7 +39,7 @@ function CaseStudies() {
           }}
           className={styles.mySwiper2}
         >
-          {caseStudies.map((item, index) => (
+          {images.map((item, index) => (
             <SwiperSlide
               key={index}
               className={`${clientStyles.caseStudiesContent} md:flex`}
@@ -82,7 +83,7 @@ function CaseStudies() {
           onSwiper={setThumbsSwiper}
           className="mySwiper swiper-thumbs bg-gray-100 cursor-pointer"
         >
-          {caseStudies.map((item, index) => (
+          {images.map((item, index) => (
             <SwiperSlide key={index}>
               <img src={item.thumb} alt={item.title} />
             </SwiperSlide>
