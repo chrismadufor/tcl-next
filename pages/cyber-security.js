@@ -13,7 +13,7 @@ function CyberSecurity() {
   return (
     <div>
       <Head>
-        <title>Cyber Security | {process.env.NEXT_PUBLIC_APP_NAME}</title>
+        <title>{`Cyber Security | ${process.env.NEXT_PUBLIC_APP_NAME}`}</title>
         <meta name="description" content="Our cybersecurity specialists hunt for threats, monitor data and alerts from your environments, and flag anomalies 24/7 with the aid of modern detection technology. We help you protect all your workstations, servers, cloud services, IoT devices, and your digital environments." />
         <meta
           name="keywords"

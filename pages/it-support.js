@@ -13,7 +13,7 @@ function ItSupport() {
   return (
     <div>
       <Head>
-        <title>IT Support | {process.env.NEXT_PUBLIC_APP_NAME}</title>
+        <title>{`IT Support | ${process.env.NEXT_PUBLIC_APP_NAME}`}</title>
         <meta name="description" content="We provide comprehensive IT Support for your workforce so they can do productive work. Your employees rely on the technology they use to be efficient and productive." />
         <meta
           name="keywords"

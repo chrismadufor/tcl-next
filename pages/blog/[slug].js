@@ -77,7 +77,7 @@ function BlogPage({ post }) {
     <div>
       <div>
         <Head>
-          <title> TCL | {`${post.title}`}</title>
+          <title>{`TCL | ${post.title}`}</title>
           <meta name="description" content={`${post.summary}`} />
           <meta
             name="keywords"

@@ -16,7 +16,7 @@ function Clients() {
   return (
     <div>
       <Head>
-        <title>Meet our Clients | {process.env.NEXT_PUBLIC_APP_NAME}</title>
+        <title>{`Meet our Clients | ${process.env.NEXT_PUBLIC_APP_NAME}`}</title>
         <meta name="description" content="Top class organsiations and established companies have chosen Techspecialist as a reliable IT partner." />
         <meta
           name="keywords"
