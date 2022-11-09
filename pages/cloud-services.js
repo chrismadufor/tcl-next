@@ -13,7 +13,7 @@ function CloudSecurity() {
   return (
     <div>
       <Head>
-        <title>{`Cloud Services | ${process.env.NEXT_PUBLIC_APP_NAME}`}</title>
+        <title>Cloud Services | Techspecialist Consulting Limited</title>
         <meta name="description" content="We are a Cloud Ecosystem Integrator and have the expertise and domain knowledge to consult, design, build, integrate and manage a shared multi-tenant Private Cloud Infrastructure that is highly efficient, automated and virtualized." />
         <meta
           name="keywords"

@@ -92,7 +92,7 @@ function Gallery({pictures}) {
   return (
     <div>
       <Head>
-        <title>{`Gallery | ${process.env.NEXT_PUBLIC_APP_NAME}`}</title>
+        <title>Gallery | Techspecialist Consulting Limited</title>
         <meta name="description" content="Techspecialist Gallery" />
         <meta property="og:url" content="https://techspecialistlimited.com/gallery" />
         <meta property="og:title" content="Gallery | Techspecialist Consulting Limited" />
