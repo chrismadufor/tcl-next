@@ -72,4 +72,9 @@ export const otherTeam = [
         title: 'System Support',
         pic: "/assets/img/team/seun.jpg"
     },
+    {
+        name: 'Ridwan Yussuf',
+        title: 'IT Support (Audio/Visual)',
+        pic: "/assets/img/team/ridwan.png"
+    },
 ]
