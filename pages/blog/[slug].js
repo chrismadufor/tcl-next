@@ -85,7 +85,7 @@ function BlogPage({ post }) {
           />
           <meta
             property="og:url"
-            content={`https://tcl-next-chrismadufor.vercel.app/blog/${post.slug}`}
+            content={`${process.env.NEXT_PUBLIC_APP_URL}/${post.slug}`}
           />
           <meta property="og:title" content={`${post.title}`} />
           <meta property="og:description" content={`${post.summary}`} />
