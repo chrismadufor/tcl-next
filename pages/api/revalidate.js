@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 const handler = async (req, res) => {
-  if(req.query.secret !== process.env.MY_SECRET_KEY) {
+  if(req.query.secret !== process.env.NEXT_APP_MY_SECRET_KEY) {
     return res.status(401).json({message: "Invalid token"})
   }
   try {
