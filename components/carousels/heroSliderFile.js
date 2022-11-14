@@ -28,6 +28,13 @@ const HeroSliderObject = [
         position: 'right'
     },
     {
+        heading: 'Enterprise Content Management',
+        subText: 'Leverage Techspecialist DocTrack to manage physical and electronic documents while retaining their integrity and authenticity.',
+        image: '/assets/img/ecm.jpg',
+        link: 'it-support',
+        position: 'right'
+    },
+    {
         heading: 'Neca Awards',
         subText: 'Neca Excellence Award winner for best and most responsible company in ICT category',
         image: '/assets/img/neca.png',

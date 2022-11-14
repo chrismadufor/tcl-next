@@ -17,7 +17,7 @@ function ItSupport() {
         <meta name="description" content="We provide comprehensive IT Support for your workforce so they can do productive work. Your employees rely on the technology they use to be efficient and productive." />
         <meta
           name="keywords"
-          content="Techspecialist, tech specialist, tech,cyber security, cyber, security, cloud, IT support, IT, IT services, Infrastructure, Tech Advisory,techspecialist,IT Abuja,Software,Software Abuja,cloud computing, Tech Nigeria, Tech company, Connect, Install, Network, Boot, BIOS, Login, Download, Update, Troubleshoot, Online, Support, reset, setup, configure, ticket, user, incidemt, advised, assisted, resolved, closed-out, escalate"
+          content="Techspecialist, tech specialist, tech,cyber security, cyber, security, cloud, IT support, IT, IT services, Infrastructure, Tech Advisory,techspecialist,IT Abuja,Software,Software Abuja,cloud computing, Tech Nigeria, Tech company, Connect, Install, Network, Boot, BIOS, Login, Download, Update, Troubleshoot, Online, Support, reset, setup, configure, ticket, user, incidemt, advised, assisted, resolved, closed-out, escalate, Enteprise Content Management, content management, enterprise content, enterprise Management, ecm, ecm in abuja"
         />
         <meta property="og:url" content="https://techspecialistlimited.com/it-support" />
         <meta property="og:title" content="IT Support | Techspecialist Consulting Limited" />
@@ -101,10 +101,10 @@ function ItSupport() {
                   <img src="/assets/img/it-proc.jpg" alt=""className='md:mr-5'/>
                   <div>
                     <h1 className="text-xl font-semibold uppercase flex items-center">
-                      Managed IT Procurement
+                    Document and Records Management
                     </h1>
                     <p className="text-sm font-normal leading-loose md:leading-loose tracking-wide my-5">
-                    Finding your way through the vast array of options for hardware and software to choose the right products for your business can be daunting —Techspecialist has solid partnerships with several suppliers so that we can access the most appropriate products for your business and deliver them quickly and at competitive prices. 
+                    Promote easy access to information inside and outside your business, while maintaining content compliance at all stages from initial capture to final archival. Your team can easily find files, track versions and keep content in a secured and access-controlled repository. 
                     </p>
                   </div>
                 </div>
