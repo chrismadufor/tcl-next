@@ -31,7 +31,7 @@ const HeroSliderObject = [
         heading: 'Enterprise Content Management',
         subText: 'Leverage Techspecialist DocTrack to manage physical and electronic documents while retaining their integrity and authenticity.',
         image: '/assets/img/ecm.jpg',
-        link: 'it-support',
+        link: 'it-support#doc__management',
         position: 'right'
     },
     {
