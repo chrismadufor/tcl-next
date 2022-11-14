@@ -18,7 +18,7 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="Techspecialist, tech specialist, tech,cyber security, cyber, security, cloud, IT support, IT, IT services, Infrastructure, Tech Advisory,techspecialist,IT Abuja,Software,Software Abuja,cloud computing, Tech Nigeria, Tech company Monitoring, Continous Testing, Improvement, Backups, Problem Management, Capacity Management, Incident Mangement, Application Knowledge, First Level Support, Second Level Support, Third Level Support, Configuration Management, Release and Deployment"
+          content="Techspecialist, tech specialist, tech, tcl abuja, tcl nigeria, tcl, tech companies in Abuja, top tech companies in Nigeria, top tech companies in Abuja, tech company in Nigeria, ,cyber security, cyber, security, cloud, IT support, IT, IT services, Infrastructure, Tech Advisory,techspecialist,IT Abuja, Software, Software Abuja,cloud computing, Tech Nigeria, Tech company Monitoring, Continous Testing, Improvement, Backups, Problem Management, Capacity Management, Incident Mangement, Application Knowledge, First Level Support, Second Level Support, Third Level Support, Configuration Management, Release and Deployment, Enteprise Content Management, content management, enterprise content, enterprise Management, ecm, ecm in abuja"
         />
         <meta name="robots" content="index, follow" />
         <meta property="og:url" content="https://techspecialistlimited.com/" />

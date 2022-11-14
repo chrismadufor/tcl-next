@@ -17,7 +17,7 @@ function Company() {
   return (
     <div>
       <Head>
-        <title>{`Our Company | ${process.env.NEXT_PUBLIC_APP_NAME}`}</title>
+        <title>Our Company | Techspecialist Consulting Limited</title>
         <meta
           name="description"
           content="We are a digital transformation consultancy company that delivers cutting edge IT Managed Services for enterprise organisations."

@@ -37,7 +37,7 @@ function Blog({posts}) {
   return (
     <div>
       <Head>
-        <title>{`Techspecialist Blog | ${process.env.NEXT_PUBLIC_APP_NAME}`}</title>
+        <title>Techspecialist Blog | Techspecialist Consulting Limited</title>
         <meta name="description" content="The Techspecialist Blog" />
         <meta
           name="keywords"
