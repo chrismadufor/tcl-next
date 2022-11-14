@@ -97,11 +97,11 @@ function ItSupport() {
                     </p>
                   </div>
                 </div>
-                <div className={`${styles.service_section_item} text-gray-700`}>
+                <div className={`${styles.service_section_item} text-gray-700`} id="doc__management">
                   <img src="/assets/img/it-proc.jpg" alt=""className='md:mr-5'/>
                   <div>
                     <h1 className="text-xl font-semibold uppercase flex items-center">
-                    Document and Records Management
+                      Document and Records Management
                     </h1>
                     <p className="text-sm font-normal leading-loose md:leading-loose tracking-wide my-5">
                     Promote easy access to information inside and outside your business, while maintaining content compliance at all stages from initial capture to final archival. Your team can easily find files, track versions and keep content in a secured and access-controlled repository. 
