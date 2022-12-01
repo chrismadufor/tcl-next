@@ -8,9 +8,8 @@ const handler = async (req, res) => {
   // })
   // }
   try {
-    console.log(req)
     await res.revalidate("/blog")
-    return res.send({revalidated: true, data: req})
+    return res.send({revalidated: true})
   }catch (err) {
     return res.status(500).send("Error revalidating")
   }
