@@ -7,10 +7,10 @@ const handler = async (req, res) => {
   })
   }
   try {
-    await res.revalidate(`/${request.query.page}`)
+    await res.revalidate(`/${req.query.page}`)
     return res.send({revalidated: true})
   }catch (err) {
-    return res.status(500).send("Error revalidating")
+    return res.status(500).send("Error revalidating " + err)
   }
   
 
