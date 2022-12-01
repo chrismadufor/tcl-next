@@ -125,7 +125,7 @@ function Gallery({pictures}) {
           {
             pictures.map((picture, index) => (
               <div key={index}>
-                <img onClick={() => changeActiveSlide(index)} src={picture.image.url} alt="" className='cursor-pointer h-full obj-cover' />
+                {/* <img onClick={() => changeActiveSlide(index)} src={picture.image.url} alt="" className='cursor-pointer h-full obj-cover' /> */}
               </div>
             ))
           }
@@ -137,7 +137,7 @@ function Gallery({pictures}) {
         {
           pictures.map((picture, index) => (
             <div key={index}>
-              <img src={picture.image.url} alt="" />
+              {/* <img src={picture.image.url} alt="" /> */}
             </div>
           ))
         }
