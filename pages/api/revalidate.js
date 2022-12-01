@@ -2,7 +2,7 @@
 
 const handler = async (req, res) => {
   if(req.query.secret !== process.env.NEXT_APP_MY_SECRET_KEY) {
-    return res.status(401).json({message: "Invalid token"})
+    return res.status(401).json({message: `Invalid token... Req key --> ${req.query.secret} ... env key --> ${process.env.NEXT_APP_MY_SECRET_KEY}`})
   }
   try {
     await res.revalidate("/blog")
