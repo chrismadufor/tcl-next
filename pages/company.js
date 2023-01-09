@@ -97,7 +97,7 @@ function Company() {
               </h1>
               <p className="text-sm sm:leading-loose font-normal leading-loose tracking-wide my-5 text-center">
                 Creating value for our corporate clients by delivering excellent
-                IT services that enhance personnel productivity
+                IT services that enhance productivity
               </p>
             </div>
             <div className="p-4 lg:p-10 lg:mx-10">
